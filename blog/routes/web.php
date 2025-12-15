@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', function(){
-    return "Listado de posts";
+    return "Listado de posts ";
 });
 
 ?>
