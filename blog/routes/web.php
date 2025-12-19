@@ -15,7 +15,7 @@ Route::get('/posts', function () {
 //Sesión 2: EJERCICIO 1
 Route::get('/posts/{id}', function ($id) {
     return view('ficha')->with('id', $id);
-})->where('id', "[0-9]+")
+})->where('id', "[0-9]")
   ->name('posts_ficha');
 
 //Sesión 2: EJERCICIO 2

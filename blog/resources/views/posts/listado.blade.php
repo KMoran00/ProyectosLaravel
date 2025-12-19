@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Listado de posts <?php echo $id ?></h1>
+    <h1>Listado de posts</h1>
     <ul>
         <li><a href="{{route('posts_ficha', ['id'=>1])}}">Post 1</a></li>
         <li>Post 2</li>
