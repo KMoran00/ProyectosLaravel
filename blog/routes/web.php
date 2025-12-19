@@ -9,14 +9,14 @@ Route::get('/', function () {
 
 //Sesión 1: creación ruta
 Route::get('/posts', function () {
-    return "Listado de posts ";
+    return view('posts.listado');
 })->name('posts_listado');
 
 //Sesión 2: EJERCICIO 1
 Route::get('/posts/{id}', function ($id) {
-    //return "Ficha del post " . $id;
-    return view('inicio') -> with('id', $id);
-})->where('id', "[0-9]")
-    ->name('posts_ficha');
+    return view('ficha')->with('id', $id);
+})->where('id', "[0-9]+")
+  ->name('posts_ficha');
 
+//Sesión 2: EJERCICIO 2
 //Ejemplo de vinculación con vista
