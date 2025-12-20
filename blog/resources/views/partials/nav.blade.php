@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sesión 2 - E2 Navegación</title>
-    <!-- Bootstrap CSS -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-
 <body>
-    <!-- Barra de navegación con Bootstrap -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{ route('inicio') }}">Mi Blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -31,13 +28,8 @@
         </div>
     </nav>
 
-    <!-- Contenido de la página -->
     <div class="container mt-4">
         @yield('content')
     </div>
-
-    <!-- Bootstrap JS (Vite) -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
-
 </html>
