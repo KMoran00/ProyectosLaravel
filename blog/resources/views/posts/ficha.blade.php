@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <h1>Ficha del post <?php echo $id; ?> </h1>
-
     @include('partials.nav')
     @yield('contenido')
+    <h1>Ficha del post <?php echo $id; ?> </h1>
+
+
 </body>
 
 </html>

@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <h1>Listado de posts</h1>
-    <ul>
-        <li><a href="{{route('posts_ficha', ['id'=>1])}}">Post 1</a></li>
-        <li><a href="{{route('posts_ficha', ['id'=>2])}}">Post 2</a></li>
-        <li><a href="{{route('posts_ficha', ['id'=>3])}}">Post 3</a></li>
-    </ul>
     @include('partials.nav')
     @yield('contenido')
+    <h1>Listado de posts</h1>
+    <ul>
+        <li><a href="{{ route('posts_ficha', ['id' => 1]) }}">Post 1</a></li>
+        <li><a href="{{ route('posts_ficha', ['id' => 2]) }}">Post 2</a></li>
+        <li><a href="{{ route('posts_ficha', ['id' => 3]) }}">Post 3</a></li>
+    </ul>
+
 </body>
 
 </html>
