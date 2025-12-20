@@ -20,3 +20,7 @@ Route::get('/posts/{id}', function ($id) {
 
 //Sesión 2: EJERCICIO 2
 //Ejemplo de vinculación con vista
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
