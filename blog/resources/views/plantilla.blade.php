@@ -11,6 +11,7 @@
 <body>
     @include('partials.nav')
     @yield('contenido')
+    <p>Hola estás en blog</p>
 </body>
 
 </html>
