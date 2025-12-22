@@ -39,6 +39,7 @@
             <div>{{ fechaActual('d/m/Y') }}</div>
         </div>
         @yield('content')
+
     </div>
 </body>
 
