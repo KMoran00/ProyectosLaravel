@@ -1,11 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+
 
 
 Route::get('/', function () {
     return view('plantilla');
 })->name('inicio');
+
+//Sesión 3 - Ej 1
+Route::resource('posts', PostController::class)->only(['index', 'show', 'create', 'edit']);
 
 //Sesión 1: creación ruta
 Route::get('/posts', function () {
