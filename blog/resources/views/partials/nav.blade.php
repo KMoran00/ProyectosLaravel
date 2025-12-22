@@ -33,6 +33,12 @@
         </div>
     </nav>
 
+    <div class="fecha">
+        <div>
+            {{fechaActual('d/m/Y')}}
+        </div>
+    </div>
+
     <div class="container mt-4">
         @yield('content')
     </div>

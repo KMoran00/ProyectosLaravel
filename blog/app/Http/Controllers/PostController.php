@@ -19,8 +19,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        echo"Nuevo post";
-        return view('/');
+        return redirect()->route('posts.index');
 
     }
 
@@ -45,8 +44,7 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        echo"Edición de post";
-        return view('/');
+        return redirect()->route('/');
     }
 
     /**
