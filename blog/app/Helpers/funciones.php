@@ -5,6 +5,4 @@
     {
         return date($formato);
     }
-
-
 ?>
