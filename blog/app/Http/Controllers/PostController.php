@@ -19,7 +19,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        echo"Nuevo post";
+        return view('/');
+
     }
 
     /**
@@ -35,7 +37,7 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('posts.show');
     }
 
     /**
@@ -43,7 +45,8 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        echo"Edición de post";
+        return view('/');
     }
 
     /**

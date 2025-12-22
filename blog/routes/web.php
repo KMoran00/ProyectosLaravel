@@ -14,12 +14,12 @@ Route::resource('posts', PostController::class)->only(['index', 'show', 'create'
 
 //Sesión 1: creación ruta
 Route::get('/posts', function () {
-    return view('posts.listado');
+    return view('posts.index');
 })->name('posts_listado');
 
 //Sesión 2: EJERCICIO 1
 Route::get('/posts/{id}', function ($id) {
-    return view('posts.ficha')->with('id', $id);
+    return view('posts.show')->with('id', $id);
 })->where('id', "[0-9]")
   ->name('posts_ficha');
 

@@ -11,7 +11,7 @@
 <body>
     @include('partials.nav')
     @yield('contenido')
-    <h1>Ficha del post <?php echo $id; ?> </h1>
+    <h1>Ficha del post </h1>
 
 
 </body>
