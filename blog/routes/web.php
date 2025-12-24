@@ -29,3 +29,8 @@ Route::get('/posts/{id}', function ($id) {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Sesión 4 - rutas
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
