@@ -35,5 +35,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::delete('/posts/{id}', [PostController::class, 'destroy']);
-Route::get('/posts-prueba', [PostController::class, 'nuevoPrueba']);
+Route::get('/posts/nuevoPrueba', [PostController::class, 'nuevoPrueba']);
+Route::get('/posts/editarPrueba/{id}', [PostController::class, 'editarPrueba']);
 

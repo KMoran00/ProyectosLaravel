@@ -79,4 +79,17 @@ class PostController extends Controller
 
         return redirect('/posts');
     }
+
+    public function editarPrueba($id)
+    {
+    $post = Post::findOrFail($id);
+
+    $post->update([
+        'title' => 'Título ' . rand(1, 1000),
+        'content' => 'Contenido ' . rand(1, 1000),
+    ]);
+
+    return redirect('/posts'); 
+    }
+
 }
