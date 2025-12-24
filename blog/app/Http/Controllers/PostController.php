@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Post;
+
+
 class PostController extends Controller
 {
     /**
@@ -11,7 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = Post::orderBy('title')->paginate(5);
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**
@@ -36,9 +40,9 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        return view('posts.show');
+        $post = Post::findOrFail($id);
+        return view('posts.show', ['post' => $post]);
     }
-
     /**
      * Show the form for editing the specified resource.
      */

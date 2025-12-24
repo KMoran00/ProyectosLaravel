@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Listadoposts</title>
+    <title>Listado de posts</title>
 </head>
-
 <body>
-    @include('partials.nav')
-    @yield('contenido')
-    <h1>Listado de posts</h1>
+
+@include('partials.nav')
+
+<h1>Listado de posts</h1>
+
+@if ($posts->count() > 0)
     <ul>
-        <li><a href="{{ route('posts_ficha', ['id' => 1]) }}">Post 1</a></li>
-        <li><a href="{{ route('posts_ficha', ['id' => 2]) }}">Post 2</a></li>
-        <li><a href="{{ route('posts_ficha', ['id' => 3]) }}">Post 3</a></li>
+        @foreach ($posts as $post)
+            <li>
+                <strong>{{ $post->title }}</strong>
+
+                <a href="{{ route('posts.show', $post->id) }}">
+                    Ver
+                </a>
+
+                <form action="{{ route('posts.destroy', $post->id) }}"
+                    method="POST"
+                    style="display:inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        @endforeach
     </ul>
 
-</body>
+    {{ $posts->links() }}
+@else
+    <p>No hay posts.</p>
+@endif
 
+</body>
 </html>

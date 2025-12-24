@@ -21,7 +21,7 @@ Route::get('/posts', function () {
 Route::get('/posts/{id}', function ($id) {
     return view('posts.show')->with('id', $id);
 })->where('id', "[0-9]")
-  ->name('posts_ficha');
+->name('posts_ficha');
 
 //Sesión 2: EJERCICIO 2
 //Ejemplo de vinculación con vista
