@@ -6,6 +6,7 @@
 <body>
 
 <h1>Listado de posts</h1>
+<a href="/posts-prueba">Crear post de prueba</a>
 
 <ul>
 @foreach ($posts as $post)

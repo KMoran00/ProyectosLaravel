@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->integer('id')->primary()->auto_increment();
-            $table->string('titulo');
-            $table->text('contenido');
+            $table->id();
+            $table->string('title');
+            $table->text('content');
             $table->timestamps();
         });
     }
