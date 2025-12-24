@@ -34,3 +34,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Sesión 4 - rutas
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
+Route::get('/posts-prueba', [PostController::class, 'nuevoPrueba']);
+

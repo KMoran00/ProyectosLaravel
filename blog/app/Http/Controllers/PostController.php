@@ -64,6 +64,19 @@ class PostController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Post::findOrFail($id)->delete();
+        return redirect('/posts');
+
+    }
+
+    //Sesión 4 - Ej2
+    public function nuevoPrueba()
+    {
+        Post::create([
+            'title' => 'Título ' . rand(1, 100),
+            'content' => 'Contenido ' . rand(1, 100),
+        ]);
+
+        return redirect('/posts');
     }
 }

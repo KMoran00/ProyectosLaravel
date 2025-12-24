@@ -27,7 +27,7 @@
                     <a class="nav-link" href="{{ route('inicio') }}">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('posts_listado') }}">Listado de posts</a>
+                <a class="nav-link" href="/posts">Listado de posts</a>
                 </li>
             </ul>
         </div>
