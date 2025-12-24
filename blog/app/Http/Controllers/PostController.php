@@ -82,14 +82,14 @@ class PostController extends Controller
 
     public function editarPrueba($id)
     {
-    $post = Post::findOrFail($id);
+        $post = Post::findOrFail($id);
 
-    $post->update([
-        'title' => 'Título ' . rand(1, 1000),
-        'content' => 'Contenido ' . rand(1, 1000),
-    ]);
+        $post->update([
+            'title' => 'Título ' . rand(1, 1000),
+            'content' => 'Contenido ' . rand(1, 1000),
+        ]);
 
-    return redirect('/posts'); 
+        return redirect('/posts');
     }
 
 }

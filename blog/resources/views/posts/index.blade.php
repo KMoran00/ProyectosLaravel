@@ -6,7 +6,8 @@
 <body>
 
 <h1>Listado de posts</h1>
-<a href="/posts">Crear post de prueba</a>
+
+<a href="/posts/nuevoPrueba">Crear post de prueba</a>
 
 <ul>
 @foreach ($posts as $post)
@@ -14,6 +15,8 @@
         {{ $post->title }}
 
         <a href="/posts/{{ $post->id }}">Ver</a>
+
+        <a href="/posts/editarPrueba/{{ $post->id }}">Editar prueba</a>
 
         <form action="/posts/{{ $post->id }}" method="POST" style="display:inline">
             @csrf
